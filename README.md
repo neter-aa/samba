@@ -6,6 +6,7 @@ cd samba/samba-alpine-docker
 #make tag registry.guoli-dev.com/samba
 docker build -t registry.guoli-dev.com/samba .
 
+cd ..
 #centos7 need adduser & make dir public
 groupadd -g 2000 samba
 adduser -u 2000 -g 2000 -s /bin/false samba
@@ -15,3 +16,6 @@ chown -R samba.samba /data/samba/public/
 
 bash run.sh
 ```
+
+guest readonly
+guoli writeable
